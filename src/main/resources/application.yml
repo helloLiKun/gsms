@@ -1,9 +1,8 @@
 spring:
+  profiles:
+      active: o
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:oracle:thin:@localhost:1521:orcl
-    username: K_TEST
-    password: K_TEST_9
     initialSize: 1
     minIdle: 1
     maxIdle: 20
@@ -14,8 +13,6 @@ spring:
     poolPreparedStatements: true
     maxPoolPreparedStatementPerConnectionSize: 20
   redis:
-        host: localhost
-        port: 6379
         database: 1
         pool:
           max-active: 8

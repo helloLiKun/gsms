@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.169.200:1521:orcl
+    username: K_TEST
+    password: K_TEST_9
+  redis:
+        host: 192.168.169.200
+        port: 6378
+        password: myRedis
+
