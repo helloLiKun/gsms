@@ -62,6 +62,14 @@ public class UserController implements UserMapping {
             return "toLogin";
         }
     }
+
+    @RequestMapping(LOGOUT)
+    @ResponseBody
+    public String logout(){
+        SecurityUtils.getSubject().logout();
+        return "logout success";
+    }
+
     @RequestMapping(UNAUTHORIZED)
     public String unauthorized(){
         return "unauthorized";

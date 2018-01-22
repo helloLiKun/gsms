@@ -65,11 +65,6 @@ public class ShiroConfig {
     public ShiroFilterFactoryBean shiroFilterFactoryBean(DefaultWebSecurityManager  securityManager){
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
-        Map<String,Filter> filters = new LinkedHashMap<String, Filter>();
-        LogoutFilter logoutFilter = new LogoutFilter();
-        logoutFilter.setRedirectUrl("/base/authBase/user/toLogin");
-        filters.put("/base/authBase/user/toLogout", logoutFilter);
-        shiroFilterFactoryBean.setFilters(filters);
         Map<String, String> filterChainDefinitionManager = new LinkedHashMap<>();
         filterChainDefinitionManager.put("/base/authBase/user/register","anon");
         filterChainDefinitionManager.put("/base/authBase/user/registerSubmitUrl","anon");
