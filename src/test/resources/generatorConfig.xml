@@ -11,16 +11,16 @@
 		</commentGenerator>
 
 		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-						connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="K_TEST"
+						connectionURL="jdbc:oracle:thin:@192.168.169.200:1521:orcl" userId="K_TEST"
 						password="K_TEST_9"/>
-		<javaModelGenerator targetPackage="com.gsms.cn.entity"
+		<javaModelGenerator targetPackage="com.gsms.cn.entity.authorization"
 							targetProject="src/main/java" />
 		<sqlMapGenerator targetPackage="xml"
 						 targetProject="src/main/resources" />
-		<javaClientGenerator targetPackage="com.gsms.cn.mapper"
+		<javaClientGenerator targetPackage="com.gsms.cn.mapper.authorization"
 							 targetProject="src/main/java" type="XMLMAPPER" />
 
-		<table tableName="t_user" domainObjectName="User">
+		<table tableName="T_USER" domainObjectName="User">
 
 		</table>
 		<!--	<javaModelGenerator targetPackage="intedb.entity"

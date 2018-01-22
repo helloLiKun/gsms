@@ -26,7 +26,7 @@ spring:
   thymeleaf:
     encoding: utf-8
     content-type: text/html
-    mode: HTML
+    mode: HTML5
 
 #mybatis
 mybatis:
