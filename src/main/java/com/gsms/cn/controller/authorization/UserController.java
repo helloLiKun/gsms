@@ -1,5 +1,4 @@
 package com.gsms.cn.controller.authorization;
-
 import com.gsms.cn.entity.authorization.User;
 import com.gsms.cn.mapping.authorization.user.UserMapping;
 import com.gsms.cn.service.authorization.UserService;
@@ -14,7 +13,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -25,7 +23,7 @@ public class UserController implements UserMapping {
     @RequestMapping(REGISTER)
     public String register(ModelMap map){
         map.put("registerSubmitUrl",REGISTERSUBMIT);
-        return "register";
+        return "views/register";
     }
 
     @RequestMapping(REGISTERSUBMIT)
@@ -41,7 +39,7 @@ public class UserController implements UserMapping {
     @RequestMapping(TOLOGIN)
     public String toLogin(ModelMap map){
         map.put("loginUrl",LOGIN);
-        return "toLogin";
+        return "views/tologin";
     }
     @RequestMapping(LOGIN)
     public String login(HttpServletRequest request){
@@ -59,7 +57,7 @@ public class UserController implements UserMapping {
             return "welcome";
         }catch (AuthenticationException e) {//登录失败
             request.setAttribute("msg", "用户名和密码错误");
-            return "toLogin";
+            return "views/tologin";
         }
     }
 
@@ -72,25 +70,25 @@ public class UserController implements UserMapping {
 
     @RequestMapping(UNAUTHORIZED)
     public String unauthorized(){
-        return "unauthorized";
+        return "views/unauthorized";
     }
 
     @RequestMapping(LOGINSUCCESS)
     public String loginSuccess(){
-        return "welcome";
+        return "views/welcome";
     }
 
     @RequestMapping(TEST1)
     public String test1(){
-        return "test1";
+        return "views/test1";
     }
     @RequestMapping(TEST2)
     public String test2(){
-        return "test2";
+        return "views/test2";
     }
     @RequestMapping(TEST3)
     public String test3(){
-        return "test3";
+        return "views/test3";
     }
 
 

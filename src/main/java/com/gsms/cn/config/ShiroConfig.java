@@ -101,8 +101,8 @@ public class ShiroConfig {
         return aasa;
     }
     //thymeleaf模板引擎和shiro整合时使用
-    @Bean(name = "shiroDialect")
-    public ShiroDialect shiroDialect(){
-        return new ShiroDialect();
-    }
+//    @Bean(name = "shiroDialect")
+//    public ShiroDialect shiroDialect(){
+//        return new ShiroDialect();
+//    }
 }

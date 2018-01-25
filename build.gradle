@@ -80,7 +80,7 @@ dependencies {
 			'javax.servlet.jsp.jstl:jstl:1.2',
 			//shiro和thymeleaf整合
 			'com.github.theborakompanioni:thymeleaf-extras-shiro:1.0.2',
-			'org.thymeleaf:thymeleaf:3.0.7.RELEASE'
+			'org.thymeleaf:thymeleaf:2.1.5.RELEASE'
 
 	)
 
