@@ -23,7 +23,7 @@ public class UserController implements UserMapping {
     @RequestMapping(REGISTER)
     public String register(ModelMap map){
         map.put("registerSubmitUrl",REGISTERSUBMIT);
-        return "views/register";
+        return "user/register";
     }
 
     @RequestMapping(REGISTERSUBMIT)
@@ -39,7 +39,7 @@ public class UserController implements UserMapping {
     @RequestMapping(TOLOGIN)
     public String toLogin(ModelMap map){
         map.put("loginUrl",LOGIN);
-        return "views/tologin";
+        return "user/tologin";
     }
     @RequestMapping(LOGIN)
     public String login(HttpServletRequest request){
@@ -57,7 +57,7 @@ public class UserController implements UserMapping {
             return "welcome";
         }catch (AuthenticationException e) {//登录失败
             request.setAttribute("msg", "用户名和密码错误");
-            return "views/tologin";
+            return "user/tologin";
         }
     }
 
@@ -70,25 +70,25 @@ public class UserController implements UserMapping {
 
     @RequestMapping(UNAUTHORIZED)
     public String unauthorized(){
-        return "views/unauthorized";
+        return "user/unauthorized";
     }
 
     @RequestMapping(LOGINSUCCESS)
     public String loginSuccess(){
-        return "views/welcome";
+        return "user/welcome";
     }
 
     @RequestMapping(TEST1)
     public String test1(){
-        return "views/test1";
+        return "user/test1";
     }
     @RequestMapping(TEST2)
     public String test2(){
-        return "views/test2";
+        return "user/test2";
     }
     @RequestMapping(TEST3)
     public String test3(){
-        return "views/test3";
+        return "user/test3";
     }
 
 
