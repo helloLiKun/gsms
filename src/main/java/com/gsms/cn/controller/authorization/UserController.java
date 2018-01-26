@@ -54,7 +54,7 @@ public class UserController implements UserMapping {
             User user=new User();
             user.setName(username);
             request.setAttribute("user",user);
-            return "welcome";
+            return "user/welcome";
         }catch (AuthenticationException e) {//登录失败
             request.setAttribute("msg", "用户名和密码错误");
             return "user/tologin";

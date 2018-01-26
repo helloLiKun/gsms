@@ -57,21 +57,21 @@ configurations {
 
 dependencies {
 	compile(
-			//项目构建基本导包
-			'org.springframework.boot:spring-boot-starter-jdbc',
-			'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0',
-			'org.springframework.session:spring-session',
-			'org.springframework.boot:spring-boot-starter-thymeleaf',
-			'org.springframework.boot:spring-boot-starter-web',
-			'com.alibaba:druid:+',
-			'com.alibaba:fastjson:1.2.34',
-			'com.oracle:ojdbc6:11.2.0.3',
-			"org.springframework.boot:spring-boot-starter-undertow",
-			"org.springframework.session:spring-session",
-			"org.springframework.boot:spring-boot-starter-data-redis",
-			//themeleaf模板必导3个包
-			"org.thymeleaf:thymeleaf:3.0.6.RELEASE",
-			"org.thymeleaf:thymeleaf-spring4:3.0.6.RELEASE",
+//			//项目构建基本导包
+//			'org.springframework.boot:spring-boot-starter-jdbc',
+//			'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0',
+//			'org.springframework.session:spring-session',
+//			'org.springframework.boot:spring-boot-starter-thymeleaf',
+//			'org.springframework.boot:spring-boot-starter-web',
+//			'com.alibaba:druid:+',
+//			'com.alibaba:fastjson:1.2.34',
+//			'com.oracle:ojdbc6:11.2.0.3',
+//			"org.springframework.boot:spring-boot-starter-undertow",
+//			"org.springframework.session:spring-session",
+//			"org.springframework.boot:spring-boot-starter-data-redis",
+//			//themeleaf模板必导3个包
+//			"org.thymeleaf:thymeleaf:3.0.6.RELEASE",
+//			"org.thymeleaf:thymeleaf-spring4:3.0.6.RELEASE",
 			"nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.2.2",
 			//shiro包
 			'org.apache.shiro:shiro-spring:1.2.4',
@@ -80,7 +80,44 @@ dependencies {
 			'javax.servlet.jsp.jstl:jstl:1.2',
 			//shiro和thymeleaf整合
 			'com.github.theborakompanioni:thymeleaf-extras-shiro:1.0.2',
-			'org.thymeleaf:thymeleaf:2.1.5.RELEASE'
+			'org.thymeleaf:thymeleaf:2.1.5.RELEASE',
+
+
+			"org.springframework.boot:spring-boot-starter-undertow",
+			"org.thymeleaf:thymeleaf:3.0.6.RELEASE",
+			"org.thymeleaf:thymeleaf-spring4:3.0.6.RELEASE",
+			"nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.2.2",
+			"org.springframework.boot:spring-boot-starter-thymeleaf",
+			"org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0",
+			"com.github.pagehelper:pagehelper-spring-boot-starter:1.1.2",
+			"com.alibaba:druid:+",
+			"org.springframework:spring-test",
+			"org.springframework.session:spring-session",
+			"org.springframework.boot:spring-boot-starter-data-redis",
+			"org.jodd:jodd-core:+",
+			"org.jodd:jodd-bean:+",
+//            "com.alibaba:fastjson:+",
+			"com.alibaba:fastjson:1.2.34",
+			"javax.mail:mail:1.4.7",
+			"pentaho-kettle:kettle-core:7.1.0.0-12",
+			"pentaho-kettle:kettle-dbdialog:7.1.0.0-12",
+			"pentaho-kettle:kettle-engine:7.1.0.0-12",
+			/*    "pentaho-kettle:kettle-ui-swt:7.1.0.0-12",*/
+			"pentaho-kettle:kettle5-log4j-plugin:7.1.0.0-12",
+			"pentaho-kettle:kettle-jdbc:5.0.0",
+			"org.apache.poi:poi-ooxml:3.17-beta1",
+			"org.apache.poi:poi-ooxml-schemas:3.16",
+			"org.springframework.data:spring-data-solr",
+			"org.springframework.boot:spring-boot-starter-freemarker:2.0.0.M3",
+			"org.springframework.boot:spring-boot-starter-aop:2.0.0.M2",
+			"org.jeecg:easypoi-base:2.4.0",
+			"org.jeecg:easypoi-annotation:2.1.4",
+//			'com.oracle:ojdbc14:10.2.0.4.0',`
+			'com.oracle:ojdbc6:11.2.0.3',
+//			'com.oracle:classes12:10.2.0.2.0',
+
+			"org.codehaus.janino:janino:2.5.16",
+//			'com.github.pagehelper:pagehelper:4.1.0'
 
 	)
 
