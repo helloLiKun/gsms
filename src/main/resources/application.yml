@@ -1,6 +1,6 @@
 spring:
   profiles:
-      active: o
+      active: h
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     initialSize: 1
@@ -25,8 +25,8 @@ spring:
 #  thymeleaf模板引擎
   thymeleaf:
     encoding: utf-8
-    content-type: text/html
     mode: HTML
+    content-type: text/html
     cache: false
 #  resources:
 #      chain:

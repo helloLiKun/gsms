@@ -47,18 +47,23 @@ public class UserController implements UserMapping {
         org.apache.shiro.subject.Subject currentUser = SecurityUtils.getSubject();
         String username=request.getParameter("username");
         String password=request.getParameter("password");
-        UsernamePasswordToken token = new UsernamePasswordToken(username,Encrypt.toEncrypt(username,password));
-
-        try {
-            currentUser.login(token);
-            User user=new User();
-            user.setName(username);
-            request.setAttribute("user",user);
-            return "user/welcome";
-        }catch (AuthenticationException e) {//登录失败
-            request.setAttribute("msg", "用户名和密码错误");
+        if(username!=null && !username.equals("") ){
+            UsernamePasswordToken token = new UsernamePasswordToken(username,Encrypt.toEncrypt(username,password));
+            try {
+                currentUser.login(token);
+                User user=new User();
+                user.setName(username);
+                request.setAttribute("user",user);
+                return "user/welcome";
+            }catch (AuthenticationException e) {//登录失败
+                request.setAttribute("msg", "用户名和密码错误");
+                return "user/tologin";
+            }
+        }else{
             return "user/tologin";
         }
+
+
     }
 
     @RequestMapping(LOGOUT)
